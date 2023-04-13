@@ -1,0 +1,46 @@
+nav{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: blueviolet;
+    color: white;
+}
+.logoText{
+    margin: 0 0 0 30px;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 30px; */
+    width: 25%;
+    height: 60px;
+}
+.navLinks a{
+    text-decoration: none;
+    font-size: large;
+    margin: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.navBtn{
+    font-size: large;
+    margin: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: blueviolet;
+    border: none;
+}
+
+.navLinks a:hover{
+    color: black;
+}
+ .navBtn:hover{
+    color: black;
+ }

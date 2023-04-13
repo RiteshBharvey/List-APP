@@ -1,0 +1,89 @@
+.homeContentHeader{
+    /* height: calc(100vh - 60px); */
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: aqua;
+}
+.addTask{
+    /* padding: 20px; */
+    /* margin-top: 100px; */
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: bisque;
+}
+.addTask input{
+    width: 90%;
+    font-size: large;
+    padding: 5px;
+}
+
+.taskContainer{
+    width: 50%;
+}
+
+.taskWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: burlywood;
+}
+
+.taskContent{
+    display: flex;
+    flex-direction: column;
+    /* height: 40px; */
+}
+.taskContentTitle{
+    font-weight: bold;
+}
+.taskContentTitle.taskContentTitleChecked{
+    text-decoration: line-through;
+}
+.taskContentDesc{
+    font-size: small;
+}
+
+.taskContentDesc.taskContentDescChecked{
+    text-decoration: line-through;
+}
+
+.taskHandler{
+    /* width: 150px;
+    height: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskHandler button{
+    font-size: medium;
+    width: 120px;
+    padding: 3px 10px;
+    display: block;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.homeContentHeader button:hover{
+    background-color: green;
+    color: white;
+    border-color: burlywood;
+}
+
+.taskHandler input{
+    height: 16px;
+    width: 16px;
+}
+
+
+
