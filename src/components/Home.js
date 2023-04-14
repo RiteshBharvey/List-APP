@@ -11,7 +11,7 @@ const Home = () => {
   const [refresh, setRefresh] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
 
   useEffect(() => {
     if(!isAuthenticated){
@@ -27,8 +27,9 @@ const Home = () => {
       })
       .catch((error) => {
         toast.error(error.response.data.message)
+        setIsAuthenticated(false);
       });
-  }, [refresh,isAuthenticated]);
+  }, [refresh,isAuthenticated,setIsAuthenticated]);
 
  
   const addTaskHandler = async (e) => {
@@ -52,6 +53,7 @@ const Home = () => {
     } catch (error) {
       toast.error(error.response.data.message);
       setIsLoading(false);
+      setIsAuthenticated(false);
     }
   };
 
@@ -65,6 +67,7 @@ const Home = () => {
       setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
+      setIsAuthenticated(false);
     }
   };
 
@@ -79,6 +82,7 @@ const Home = () => {
       setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
+      setIsAuthenticated(false);
     }
   };
 

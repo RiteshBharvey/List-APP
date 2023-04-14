@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import "./header.css";
 
@@ -20,8 +20,8 @@ const Header = () => {
       toast.success(data.message);
       setIsAuthenticated(false);
     } catch (error) {
-      toast.success(error.response.data.message);
-      setIsAuthenticated(true);
+      toast.error(error.response.data.message);
+      setIsAuthenticated(false);
       setIsLoading(false);
     }
   };

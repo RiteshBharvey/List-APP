@@ -24,6 +24,7 @@ function App() {
       })
       .catch((err) => {
         //setUser({});
+        //console.log("called");
         setIsAuthenticated(false);
       });
   }, [setIsAuthenticated, setUser]);
